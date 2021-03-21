@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jub - Create Team</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/dropdown.css" rel="stylesheet">
+    <script src="js/createTeam.js"></script>
+</head>
+<body>
+<section class="py-5">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="https://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 id="py-3" class="py-3">Create Team</h2>
+                        <p id="details"><br>  <a href="signin.html">Login</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="form" class="col-md-8 py-5 border">
+                <h4 class="pb-4">Please enter team details</h4>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <input id="name" placeholder="Team Name" class="form-control" required="required" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <input id="description" placeholder="Team Description" class="form-control"  type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <input id="username" placeholder="Find Team Member" class="form-control" type="text" onkeyup="showHint(this.value)">
+                            <!--<p > Suggestions: <span id="userHint" onclick="FindModule(this.value)" ></span></p>-->
+                            <div class="dropdown">
+                                  <button class="dropbtn">Suggestions</button>
+                                  <div class="dropdown-content">
+                                    <span>Link 1</span>
+                                    <span>Link 2</span>
+                                    <span>Link 3</span>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="button" onclick="createTeam($('#name').val(), $('#description').val())" class="btn btn-danger">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

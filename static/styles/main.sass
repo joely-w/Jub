@@ -1,0 +1,308 @@
+body
+  margin: 0
+  padding: 0
+  font-family: "Montserrat", sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background-color: #f9fafc
+  color: #595354
+
+.header
+  background-color: #ffffff
+  padding: 10px 40px
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1)
+
+  > .logo-container
+    display: flex
+    align-items: center
+
+    >
+    .logo-img
+      width: 60px
+      height: 60px
+      margin-right: 15px
+
+      .logo-text
+        font-size: 26px
+        font-weight: 700
+
+        > .logo-highlight
+          color: #65a9e5
+
+.content-container
+  width: 100%
+  height: calc(100vh - 89px)
+  display: flex
+  justify-content: space-between
+  overflow: hidden
+
+.active-users-panel
+  width: 300px
+  height: 100%
+  border-right: 1px solid #cddfe7
+
+.panel-title
+  margin: 10px 0 0 0
+  padding-left: 30px
+  font-weight: 500
+  font-size: 18px
+  border-bottom: 1px solid #cddfe7
+  padding-bottom: 10px
+
+.active-user
+  padding: 10px 30px
+  border-bottom: 1px solid #cddfe7
+  cursor: pointer
+  user-select: none
+
+  &:hover
+    background-color: #e8e9eb
+    transition: background-color 0.5s ease
+
+.active-user--selected
+  background-color: #fff
+  border-right: 5px solid #65a9e5
+  font-weight: 500
+  transition: all 0.5s ease
+
+.video-chat-container
+  padding: 0 20px
+  flex: 1
+  position: relative
+
+.talk-info
+  font-weight: 500
+  font-size: 21px
+
+.remote-video
+  border: 1px solid #cddfe7
+  width: 100%
+  height: 100%
+  max-height: 700px
+  object-fit: cover
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+
+.local-video
+  position: absolute
+  border: 1px solid #cddfe7
+  bottom: 60px
+  right: 40px
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2)
+  border-radius: 5px
+  width: 600px
+
+body
+  background-color: #F5F5F5
+
+.border
+  background-color: white
+
+.py-5
+  margin-top: 10vh
+
+.card-body a
+  color: white !important
+  text-decoration: none
+
+
+/*
+ *  DEMO STYLE
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+
+body
+  font-family: "Poppins", sans-serif
+  background: #fafafa
+
+p
+  font-family: "Poppins", sans-serif
+  font-size: 1.1em
+  font-weight: 300
+  line-height: 1.7em
+
+
+a
+  text-decoration: none
+  transition: all 0.3s
+
+  &:hover, &:focus
+    text-decoration: none
+    transition: all 0.3s
+.navigation
+  position: fixed
+  top: 0
+  height: 100vh
+.navbar
+  padding: 15px 10px
+  background: #fff
+  border: none
+  border-radius: 0
+  margin-bottom: 40px
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1)
+
+.navbar-btn
+  box-shadow: none
+  outline: none !important
+  border: none
+
+.line
+  width: 100%
+  height: 1px
+  border-bottom: 1px dashed #ddd
+  margin: 40px 0
+
+/* ---------------------------------------------------
+ *    SIDEBAR STYLE
+ *-----------------------------------------------------
+
+.wrapper
+  display: flex
+  align-items: stretch
+
+#sidebar
+  text-align: center
+  min-width: 250px
+  max-width: 250px
+  color: white
+  transition: all 0.3s
+  height: 100%
+  background-color: #007bff
+
+  a
+    color: inherit
+
+    &:hover, &:focus
+      color: inherit
+
+  &.active
+    margin-left: -250px
+
+  img
+    padding: 30px 30px 0 30px
+    max-width: 200px
+
+  ul
+    &.components
+      padding: 20px 0
+      border-bottom: 1px solid #47748b
+
+    p
+      color: #fff
+      padding: 10px
+
+    li
+      a
+        margin-bottom: 10px
+        padding: 10px
+        font-size: 1.1em
+        display: block
+
+        &:hover
+          background: #072c54
+
+      &.active > a
+        color: black
+
+a
+  &[aria-expanded="true"]
+    color: white
+
+  &[data-toggle="collapse"]
+    position: relative
+
+  &[aria-expanded="false"]::before
+    content: "\25BC"
+    display: block
+    position: absolute
+    right: 20px
+    font-size: 0.6em
+
+  &[aria-expanded="true"]::before
+    display: block
+    position: absolute
+    right: 20px
+    font-size: 0.6em
+    content: "\25BC"
+
+ul
+  ul a
+    font-size: 0.9em !important
+    padding-left: 30px !important
+
+  &.CTAs
+    padding: 20px
+
+    a
+      text-align: center
+      font-size: 0.9em !important
+      display: block
+      border-radius: 5px
+      margin-bottom: 5px
+
+.profile
+  position: absolute
+  width: 250px
+  bottom: 50px
+  left: 0
+  text-align: center
+  color: white
+
+  img
+    display: block
+    width: 130px
+    margin: 0 auto
+
+    border-radius: 15px
+
+  h3
+    margin-top: 8px
+    font-size: 26px
+
+a
+  &.download
+    background: #fff
+
+  &.article
+    color: black !important
+
+    &:hover
+      color: #fff !important
+
+/* ---------------------------------------------------
+ *    MEDIAQUERIES
+ *-----------------------------------------------------
+
+@media (max-width: 768px)
+  #sidebar
+    margin-left: -250px
+
+    &.active
+      margin-left: 0
+
+  #sidebarCollapse span
+    display: none
+
+.body
+  display: inline
+
+.login_content
+  iframe
+    margin-top: 200px
+    margin-left: 200px
+    border: none
+    overflow: hidden
+    text-align: center
+    width: 850px
+    height: 500px
+.videocontainer
+  width: 85%
+  float: right
+.status
+  margin-top: 80px
+  ul
+    list-style-type: none
+    li
+      margin-bottom: 10px
+      img
+        max-width: 50px
+        margin-right: 10px

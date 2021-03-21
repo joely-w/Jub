@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jub - View Teams</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Local scripts -->
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/login.js"></script>
+    <script src="js/viewTeams.js"></script>
+    <style>
+
+        .column {
+            width: 170px;
+            float: left;
+            padding-bottom: 100px;
+        }
+
+        .portlet {
+            margin: 0 1em 1em 0;
+            padding: 0.3em;
+            min-width: 100px
+        }
+
+        .portlet-header {
+            padding: 0.2em 0.3em;
+            margin-bottom: 0.5em;
+            position: relative;
+        }
+
+        .portlet-toggle {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -8px;
+        }
+
+        .portlet-content {
+            padding: 0.4em;
+        }
+
+        .portlet-placeholder {
+            border: 1px dotted black;
+            margin: 0 1em 1em 0;
+            height: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="navigation">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <a href="/"><img src="images/logo.png"
+                             alt="doge logo" class="logo-img"/></a>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="createProject.html">Create teams</a>
+            </li>
+            <li>
+                <a href="viewTeams.html">Manage teams</a>
+            </li>
+            <li>
+                <a href="video.html">Knock Knock</a>
+            </li>
+            <li class="non-login">
+                <a href="signup.html">Register</a>
+            </li>
+            <li class="login"><a href="javascript:logOut()">Sign Out</a></li>
+        </ul>
+
+
+    </nav>
+    <div class="profile">
+        <img id="profile" class="photo" alt="Profile Photo" src="images/image%20(3).jfif">
+        <h3 id="profile_name"></h3>
+    </div>
+</div>
+<div class="login_content">
+    <section class="py-5">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div id="teams" class="row container-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="addEmployeeModal" class="py-5 modal">
+        <div class="container">
+            <div class="row ">
+
+                <div id="form" class="col-md-8 py-5 border">
+                    <h4 class="pb-4">Add a member</h4>
+                    <form>
+                        <input type="hidden" id="teamID" value=""/>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="username">Enter employee's name</label><input id="username"
+                                                                                          placeholder="Find Team Member"
+                                                                                          class="form-control"
+                                                                                          type="text"
+                                                                                          onkeyup="showHint(this.value)"> <br>
+                                <p> Add: <span id="userHint"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <button type="button" onclick="$('#addEmployeeModal').modal('toggle');"
+                                    class="text-center btn btn-success">Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

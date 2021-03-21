@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jub - Create Team</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/dropdown.css" rel="stylesheet">
+    <script src="js/createTeam.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+<div class="navigation">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <a href="/"><img src="images/logo.png"
+                             alt="doge logo" class="logo-img"/></a>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="createProject.html">Create teams</a>
+            </li>
+            <li>
+                <a href="viewTeams.html">Manage teams</a>
+            </li>
+            <li>
+                <a href="video.html">Knock Knock</a>
+            </li>
+            <li class="non-login">
+                <a href="signup.html">Register</a>
+            </li>
+            <li class="login"><a href="javascript:logOut()">Sign Out</a></li>
+        </ul>
+
+
+    </nav>
+    <div class="profile">
+        <img id="profile" class="photo" alt="Profile Photo" src="images/image%20(3).jfif">
+        <h3 id="profile_name"></h3>
+    </div>
+</div>
+<section class="py-5 login_content">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="https://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 id="py-3" class="py-3">Create Team</h2>
+                        <p id="details"><br></p>
+                    </div>
+                </div>
+            </div>
+            <div id="form" class="col-md-8 py-5 border">
+                <h4 class="pb-4">Please enter team details</h4>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <input id="name" placeholder="Team Name" class="form-control" required="required"
+                                   type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <input id="description" placeholder="Team Description" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="button" onclick="createTeam($('#name').val(), $('#description').val())"
+                                class="btn btn-danger">Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
